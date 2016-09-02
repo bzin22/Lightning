@@ -2,6 +2,7 @@
  // Lightning Code - Bryan Zin
  // Block 3 Mr. Simon
 
+ int mouseClicks = 0;
   // initial lightning bolt
   int x1 = 120; 
   int y1 = 120;
@@ -106,8 +107,8 @@ void draw()
 		y2 = y2 + (int)(Math.random()*18);
 	}
 
-	/*
-	if (x2 <= 350) 
+	
+	if (mouseClicks > 20) 
 	{
 		for (int j = 0; j < 400; j++) 
 		{
@@ -117,20 +118,23 @@ void draw()
 			for (int i = 0; i < 300; i++) 
 			{
 				intitalRadius += 30;
-				stroke(255,255,255);
-				text("System Error: Zeus is now bored of killing lowly humans.", 350, 350);
+				fill(255,255,255);
+				textSize(24);
+				text("System Error: Zeus is now bored of killing lowly humans.", 10, 350);
 			}
 			
-		}
+		} 
 		
-	}
-	*/
+	} 
+	
 }
 
 void mousePressed()
 {
 	redraw(); 
-	/* if (true) 
+
+	mouseClicks = mouseClicks + 1;
+	 /*if (true)
 		{
 			xHead = 600;
 			yHead = 640;
@@ -139,8 +143,8 @@ void mousePressed()
 		    x2body = 475;
 		    y2body = 670;
 		} 
-	*/
 	
+	*/
 	x1 = 120;
 	y1 = 120;
 	x2 = (int)(Math.random()*300);
