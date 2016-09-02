@@ -121,7 +121,9 @@ void draw()
 				fill(255,255,255);
 				textSize(24);
 				text("System Error: Zeus is now bored of killing lowly humans.", 10, 350);
+				System.exit(0);
 			}
+
 			
 		} 
 		
