@@ -68,15 +68,12 @@ void draw()
 	
 }
 
-void backchange()
-{
-	background(255, 255, 255);
-}
+
 
 void mousePressed()
 {
 	redraw(); 
-	backchange();
+	
 	x1 = 120;
 	y1 = 120;
 	x2 = (int)(Math.random()*300);
