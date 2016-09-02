@@ -3,9 +3,9 @@
  // Block 3 Mr. Simon
 
   // initial lightning bolt
-  int x1 = 350; 
-  int y1 = 0;
-  int x2 = 340;
+  int x1 = 120; 
+  int y1 = 120;
+  int x2 = 140;
   int y2 = 10;
 
 void setup()
@@ -40,10 +40,24 @@ void draw()
 	ellipse(220, 120, 60, 60);
 	ellipse(140, 150, 60, 60);
 	ellipse(190, 150, 60, 60);
+
+	// ground
+	fill(102,51,0);
+	rect(0, 650, 700, 50);
+
+	//house
+	fill(96,96,96); 
+	rect(150, 600, 100, 50); // body
+	fill(51,25,0); 
+	triangle(150, 600, 250, 600, 200,575); // roof
+	fill(0,0,0);
+	rect(175, 625, 25, 25); // door
+
 	
 	// lightning 
 	stroke(255,0,0);
-	while (y2 < 700) // loop to make the "bolt"
+	strokeWeight(2);
+	while (y2 < 650) // loop to make the "bolt"
 	{
 		line(x1, y1, x2, y2);
 		x1 = x2;
@@ -53,12 +67,19 @@ void draw()
 	}
 	
 }
+
+void backchange()
+{
+	background(255, 255, 255);
+}
+
 void mousePressed()
 {
 	redraw(); 
-	x1 = (int)Math.random()*9;
-	y1 = 0;
-	x2 = (int)Math.random()*9;
-	y2 = (int)Math.random()*7;
+	backchange();
+	x1 = 120;
+	y1 = 120;
+	x2 = (int)(Math.random()*300);
+	y2 = (int)(Math.random()*7);
 
 }
