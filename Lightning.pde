@@ -66,9 +66,6 @@ void draw()
 	fill(153, 153, 0);
 	ellipse(120, 25, 30, 30); // head
 
-	fill(153, 153, 0);
-	rect(600, 600, 12, 12);
-
 	// clouds
 	fill(128, 128, 128);
 	noStroke();
